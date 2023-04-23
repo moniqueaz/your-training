@@ -12,7 +12,14 @@
     "exercises": {
       "conjugates": {}
     },
-    "roles": {}
+    "roles": {},
+    "home": {}
   },
-  "slices": {}
+  "slices": {
+    "Menu": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
 }

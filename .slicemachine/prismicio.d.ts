@@ -196,6 +196,35 @@ interface GroupingDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type GroupingDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<GroupingDocumentData>, "grouping", Lang>;
+/** Content for home_page documents */
+interface HomeDocumentData {
+    /**
+     * Slice Zone field in *home_page*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomeDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *home_page → Slice Zone*
+ *
+ */
+type HomeDocumentDataSlicesSlice = MenuSlice;
+/**
+ * home_page document from Prismic
+ *
+ * - **API ID**: `home`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 /** Content for plans documents */
 interface PlanDocumentData {
     /**
@@ -506,12 +535,61 @@ export interface UsersDocumentDataRolesItem {
  * @typeParam Lang - Language API ID of the document.
  */
 export type UsersDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<UsersDocumentData>, "users", Lang>;
-export type AllDocumentTypes = ExercisesDocument | GroupingDocument | PlanDocument | RolesDocument | TrainingDocument | UsersDocument;
+export type AllDocumentTypes = ExercisesDocument | GroupingDocument | HomeDocument | PlanDocument | RolesDocument | TrainingDocument | UsersDocument;
+/**
+ * Item in Menu → Items
+ *
+ */
+export interface MenuSliceDefaultItem {
+    /**
+     * label field in *Menu → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.items[].label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    label: prismicT.KeyTextField;
+    /**
+     * url field in *Menu → Items*
+     *
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: menu.items[].url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    url: prismicT.LinkToMediaField;
+}
+/**
+ * Default variation for Menu Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Menu`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type MenuSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<MenuSliceDefaultItem>>;
+/**
+ * Slice variation for *Menu*
+ *
+ */
+type MenuSliceVariation = MenuSliceDefault;
+/**
+ * Menu Shared Slice
+ *
+ * - **API ID**: `menu`
+ * - **Description**: `Menu`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type MenuSlice = prismicT.SharedSlice<"menu", MenuSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ExercisesDocumentData, ExercisesDocumentDataConjugatesItem, ExercisesDocumentDataImagesItem, ExercisesDocument, GroupingDocumentData, GroupingDocument, PlanDocumentData, PlanDocument, RolesDocumentData, RolesDocument, TrainingDocumentData, TrainingDocumentDataSlicesSlice, TrainingDocumentDataExercisesItem, TrainingDocument, UsersDocumentData, UsersDocumentDataRolesItem, UsersDocument, AllDocumentTypes };
+        export type { ExercisesDocumentData, ExercisesDocumentDataConjugatesItem, ExercisesDocumentDataImagesItem, ExercisesDocument, GroupingDocumentData, GroupingDocument, HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, PlanDocumentData, PlanDocument, RolesDocumentData, RolesDocument, TrainingDocumentData, TrainingDocumentDataSlicesSlice, TrainingDocumentDataExercisesItem, TrainingDocument, UsersDocumentData, UsersDocumentDataRolesItem, UsersDocument, AllDocumentTypes, MenuSliceDefaultItem, MenuSliceDefault, MenuSliceVariation, MenuSlice };
     }
 }
