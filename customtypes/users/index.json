@@ -1,0 +1,50 @@
+{
+  "id": "users",
+  "label": "users",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "name",
+          "placeholder": ""
+        }
+      },
+      "user": {
+        "type": "Text",
+        "config": {
+          "label": "user",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "roles": {
+        "type": "Group",
+        "config": {
+          "label": "roles",
+          "fields": {
+            "roles": {
+              "type": "Link",
+              "config": {
+                "label": "roles",
+                "select": "document",
+                "customtypes": [
+                  "roles"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

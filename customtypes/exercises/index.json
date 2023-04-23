@@ -1,0 +1,116 @@
+{
+  "id": "exercises",
+  "label": "exercises",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "exercise": {
+        "type": "Text",
+        "config": {
+          "label": "exercise",
+          "placeholder": ""
+        }
+      },
+      "resume": {
+        "type": "Text",
+        "config": {
+          "label": "resume",
+          "placeholder": ""
+        }
+      },
+      "delay": {
+        "type": "Text",
+        "config": {
+          "label": "delay",
+          "placeholder": ""
+        }
+      },
+      "serie": {
+        "type": "Text",
+        "config": {
+          "label": "serie",
+          "placeholder": ""
+        }
+      },
+      "repeats": {
+        "type": "Text",
+        "config": {
+          "label": "repeats",
+          "placeholder": ""
+        }
+      },
+      "isometry": {
+        "type": "Text",
+        "config": {
+          "label": "isometry",
+          "placeholder": ""
+        }
+      },
+      "time": {
+        "type": "Text",
+        "config": {
+          "label": "time",
+          "placeholder": ""
+        }
+      },
+      "grouping": {
+        "type": "Link",
+        "config": {
+          "label": "grouping",
+          "select": "document",
+          "customtypes": [
+            "grouping"
+          ]
+        }
+      },
+      "conjugates": {
+        "type": "Group",
+        "config": {
+          "label": "conjugates",
+          "fields": {
+            "conjugate": {
+              "type": "Link",
+              "config": {
+                "label": "conjugate",
+                "select": "document",
+                "customtypes": [
+                  "exercises"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "Images": {
+      "images": {
+        "type": "Group",
+        "config": {
+          "label": "images",
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "Description": {
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

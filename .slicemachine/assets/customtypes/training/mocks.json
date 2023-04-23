@@ -1,0 +1,61 @@
+{
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "typical",
+    "type": "Text"
+  },
+  "active": {
+    "__TYPE__": "BooleanContent",
+    "value": true
+  },
+  "comments": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Sunt qui sunt do aliqua exercitation quis veniam est irure."
+        }
+      }
+    ]
+  },
+  "plan": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  },
+  "exercises": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "exercise",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ],
+          [
+            "weight",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "son",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

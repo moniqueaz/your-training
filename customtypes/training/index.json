@@ -1,0 +1,79 @@
+{
+  "id": "training",
+  "label": "training",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "title",
+          "placeholder": ""
+        }
+      },
+      "active": {
+        "type": "Boolean",
+        "config": {
+          "label": "active",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "comments": {
+        "type": "StructuredText",
+        "config": {
+          "label": "comments",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,list-item,o-list-item,rtl"
+        }
+      },
+      "plan": {
+        "type": "Link",
+        "config": {
+          "label": "plan",
+          "select": "document",
+          "customtypes": [
+            "plan"
+          ]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "Exercícios": {
+      "exercises": {
+        "type": "Group",
+        "config": {
+          "label": "exercises",
+          "fields": {
+            "exercise": {
+              "type": "Link",
+              "config": {
+                "label": "exercise",
+                "select": "document",
+                "customtypes": [
+                  "exercises"
+                ]
+              }
+            },
+            "weight": {
+              "type": "Text",
+              "config": {
+                "label": "weight",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "exercise": {
+    "__TYPE__": "FieldContent",
+    "value": "impossible",
+    "type": "Text"
+  },
+  "resume": {
+    "__TYPE__": "FieldContent",
+    "value": "hide",
+    "type": "Text"
+  },
+  "delay": {
+    "__TYPE__": "FieldContent",
+    "value": "cat",
+    "type": "Text"
+  },
+  "serie": {
+    "__TYPE__": "FieldContent",
+    "value": "atmosphere",
+    "type": "Text"
+  },
+  "repeats": {
+    "__TYPE__": "FieldContent",
+    "value": "double",
+    "type": "Text"
+  },
+  "isometry": {
+    "__TYPE__": "FieldContent",
+    "value": "castle",
+    "type": "Text"
+  },
+  "time": {
+    "__TYPE__": "FieldContent",
+    "value": "neck",
+    "type": "Text"
+  },
+  "grouping": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
+  },
+  "conjugates": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "conjugate",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "images": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+                "width": 6000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+              "width": 6000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Laborum mollit cillum ut dolor cupidatat Lorem nostrud velit commodo ex quis est."
+        }
+      }
+    ]
+  }
+}

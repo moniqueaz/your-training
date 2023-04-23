@@ -1,0 +1,75 @@
+{
+  "id": "plan",
+  "label": "plans",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "frequency": {
+        "type": "Text",
+        "config": {
+          "label": "frequency",
+          "placeholder": ""
+        }
+      },
+      "duration": {
+        "type": "Text",
+        "config": {
+          "label": "duration",
+          "placeholder": ""
+        }
+      },
+      "start_date": {
+        "type": "Timestamp",
+        "config": {
+          "label": "start date",
+          "placeholder": ""
+        }
+      },
+      "end_date": {
+        "type": "Timestamp",
+        "config": {
+          "label": "end date",
+          "placeholder": ""
+        }
+      },
+      "objective": {
+        "type": "StructuredText",
+        "config": {
+          "label": "objective",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,list-item,o-list-item,rtl"
+        }
+      },
+      "active": {
+        "type": "Boolean",
+        "config": {
+          "label": "active",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "comments": {
+        "type": "StructuredText",
+        "config": {
+          "label": "comments",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,list-item,o-list-item,rtl"
+        }
+      },
+      "user": {
+        "type": "Link",
+        "config": {
+          "label": "user",
+          "select": "document",
+          "customtypes": [
+            "users"
+          ]
+        }
+      }
+    }
+  }
+}

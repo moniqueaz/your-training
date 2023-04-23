@@ -1,0 +1,55 @@
+{
+  "frequency": {
+    "__TYPE__": "FieldContent",
+    "value": "bee",
+    "type": "Text"
+  },
+  "duration": {
+    "__TYPE__": "FieldContent",
+    "value": "certainly",
+    "type": "Text"
+  },
+  "start_date": {
+    "__TYPE__": "FieldContent",
+    "type": "Timestamp",
+    "value": "2020-08-26T12:55:33Z"
+  },
+  "end_date": {
+    "__TYPE__": "FieldContent",
+    "type": "Timestamp",
+    "value": "2012-08-20T18:41:18Z"
+  },
+  "objective": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Aute proident dolore consequat duis."
+        }
+      }
+    ]
+  },
+  "active": {
+    "__TYPE__": "BooleanContent",
+    "value": false
+  },
+  "comments": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Enim fugiat consectetur occaecat est minim nulla eiusmod velit cillum ut. Sint tempor est esse velit id anim est ex velit adipisicing aliqua irure elit non labore. Occaecat ea sint fugiat anim."
+        }
+      }
+    ]
+  },
+  "user": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
+  }
+}
